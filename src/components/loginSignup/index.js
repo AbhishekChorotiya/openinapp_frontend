@@ -2,10 +2,10 @@ import React from 'react'
 import styles from './loginSignup.module.css'
 import logo1 from '../images/logo1.png'
 import Image from "next/image";
-import github from '../images/vector.svg'
-import twitter from '../images/vector-1.svg'
-import linkedin from '../images/vector-2.svg'
-import discord from '../images/vector-3.svg'
+// import github from '../images/vector.svg'
+// import twitter from '../images/vector-1.svg'
+// import linkedin from '../images/vector-2.svg'
+// import discord from '../images/vector-3.svg'
 import google from '../images/Google.svg'
 import apple from '../images/Apple.svg'
 import Link from 'next/link';
@@ -27,10 +27,10 @@ const LoginSignup = () => {
           </div>
           <div className={styles.footer}>
             <div className={styles.footer_icons}>
-              <Image className={styles.icons} src={github}  alt='githu'/>
-              <Image className={styles.icons} src={twitter}  alt='twitter'/>
-              <Image className={styles.icons} src={linkedin}  alt='linkedin'/>
-              <Image className={styles.icons} src={discord}  alt='discord'/>
+              {/* <Image className={styles.icons} src={github}  alt='githu'/> */}
+              {/* <Image className={styles.icons} src={twitter}  alt='twitter'/> */}
+              {/* <Image className={styles.icons} src={linkedin}  alt='linkedin'/> */}
+              {/* <Image className={styles.icons} src={discord}  alt='discord'/> */}
             </div>
           </div>
         </div>
