@@ -138,36 +138,38 @@ const Upload = () => {
             className={styles.menu_logo}
             style={{ alignSelf: "center" }}
             src={logo2}
+            alt="logo2"
           />
           <Image
             onClick={menuToggle}
             className={styles.close2}
             src={close2}
             style={{ cursor: "pointer" }}
+            alt="close2"
           />
         </div>
         <div className={styles.menu_options}>
-          <Image style={{ marginLeft: "2rem" }} src={dashIcon} />
-          <Image style={{ marginLeft: "0.9rem" }} src={Dashboard} />
+          <Image style={{ marginLeft: "2rem" }} src={dashIcon} alt="dashicon"/>
+          <Image style={{ marginLeft: "0.9rem" }} src={Dashboard} alt="dashboard"/>
         </div>
         <div className={styles.menu_options}>
-          <Image style={{ position: "absolute", left: "0" }} src={bg} />
-          <Image style={{ marginLeft: "2rem" }} src={upload} />
+          <Image style={{ position: "absolute", left: "0" }} src={bg}  alt="bg"/>
+          <Image style={{ marginLeft: "2rem" }} src={upload} alt="upload"/>
         </div>
         <div className={styles.menu_options}>
-          <Image style={{ marginLeft: "2rem" }} src={invoice} />
+          <Image style={{ marginLeft: "2rem" }} src={invoice} alt="invoice"/>
         </div>
         <div className={styles.menu_options}>
-          <Image style={{ marginLeft: "2rem" }} src={schedule} />
+          <Image style={{ marginLeft: "2rem" }} src={schedule} alt="schedule"/>
         </div>
         <div className={styles.menu_options}>
-          <Image style={{ marginLeft: "2rem" }} src={calander} />
+          <Image style={{ marginLeft: "2rem" }} src={calander}  alt="calender"/>
         </div>
         <div className={styles.menu_options}>
-          <Image style={{ marginLeft: "2rem" }} src={Notification} />
+          <Image style={{ marginLeft: "2rem" }} src={Notification} alt="notifications"/>
         </div>
         <div className={styles.menu_options}>
-          <Image style={{ marginLeft: "2rem" }} src={settings} />
+          <Image style={{ marginLeft: "2rem" }} src={settings} alt="settings" />
         </div>
       </div>
       <div className={styles.right}>
@@ -182,11 +184,13 @@ const Upload = () => {
               }}
               src={threeLines}
               onClick={menuToggle}
+              alt="toggle"
             />
             <Image
               className={styles.title_logo}
               style={{ alignSelf: "center" }}
               src={logo2}
+              alt='logo2'
             />
           </div>
           <span
@@ -197,7 +201,7 @@ const Upload = () => {
           </span>
 
           <div>
-            <Image src={headerIcons} />
+            <Image src={headerIcons} alt="headericons"/>
           </div>
         </div>
         <div className={styles.right_content}>
@@ -218,7 +222,7 @@ const Upload = () => {
               className={styles.upload_inner}
               onClick={() => {}}
             >
-              <Image style={{ marginBottom: "1.5rem" }} src={excelupload} />
+              <Image style={{ marginBottom: "1.5rem" }} src={excelupload} alt="excelIcon" />
               {fileName.length > 0 ? (
                 <>
                   <span>{fileName}</span>
@@ -258,7 +262,7 @@ const Upload = () => {
                 document.getElementById("fileInput").click();
               }}
             >
-              {!showSpinner ? <Image src={uploadIcon} /> : ""}
+              {!showSpinner ? <Image src={uploadIcon} alt="uploadIcon"/> : ""}
               {!showSpinner ? (
                 <span
                   style={{
@@ -316,9 +320,10 @@ const Upload = () => {
                       />
                     </div>
                     <div style={{ display: "flex", flexWrap: "wrap" }}>
-                      {val.selectedTags.map((a) => {
+                      {val.selectedTags.map((a,i) => {
                         return (
                           <div
+                            key={i}
                             className={styles.tag}
                             onClick={() => handleFilter({ a }, i)}
                           >
