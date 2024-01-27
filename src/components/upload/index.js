@@ -86,7 +86,7 @@ const Upload = () => {
     console.log("filter", data, indx);
     setObjData((prev) => {
       return prev.map((a, i) => {
-        let tempData = prev[indx].selectedTags.filter((a) => a != data.a);
+        let tempData = prev[indx].selectedTags.filter((a) => a != data);
         return i == indx ? { ...a, selectedTags: tempData } : a;
       });
     });
@@ -232,6 +232,7 @@ const Upload = () => {
                       setBufferData(null);
                       setFileName("");
                       setObjData(null);
+                      document.getElementById('fileInput').value=''
                     }}
                   >
                     Remove
@@ -320,12 +321,12 @@ const Upload = () => {
                       />
                     </div>
                     <div style={{ display: "flex", flexWrap: "wrap" }}>
-                      {val.selectedTags.map((a,i) => {
+                      {val.selectedTags.map((a,indx) => {
                         return (
                           <div
-                            key={i}
+                            key={indx}
                             className={styles.tag}
-                            onClick={() => handleFilter({ a }, i)}
+                            onClick={() => handleFilter(a, i)}
                           >
                             <span style={{ marginRight: "1rem" }}>{a}</span>
                             <Image alt="close" src={close} />
